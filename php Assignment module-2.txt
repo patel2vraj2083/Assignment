@@ -1,0 +1,1879 @@
+PHP Full Stack Assignment :- Module 2-Introduction to Programming
+Overview of C Programming:
+Q.1)Write an essay covering the history and evolution of C programming.Explain its importance and why it is still used today.
+=>  C is a powerful, structured, low-level programming language created by Dennis Ritchie at Bell Labs in 1972, evolving from earlier languages like B and BCPL to develop the Unix operating system.
+    History and Evolution of C:
+    C's journey began in the early 1970s at Bell Labs, as Dennis Ritchie sought to improve upon the limitations of its predecessors, BCPL and B. B, a simplified version of BCPL, lacked features like data typing and structured programming, hindering the development of large programs. 
+    Ritchie addressed these shortcomings by creating C, introducing strong data types, enhanced syntax, and a compiler for efficient machine code generation. 
+    The language was developed alongside the Unix operating system, for which it became the foundational language, demonstrating its suitability for system software.
+    Importance of C Programming:
+    C's importance lies in its unique blend of low-level control and high-level structure, offering significant advantages: 
+    Efficiency:
+    C's compiled nature allows for direct translation to machine code, resulting in extremely fast and memory-efficient programs. 
+    Portability:
+    C programs are designed to be portable, meaning code written on one system can be easily adapted and run on other platforms with minimal changes. 
+    Flexibility:
+    It provides developers with granular control over memory and hardware, enabling fine-tuned optimizations essential for performance-critical applications. 
+    Foundation for Other Languages:
+    C has served as the basis for many other popular programming languages, including C++, Java, and Python, inheriting many of its core concepts.
+    Why C is Still Used Today:
+    Despite being over 50 years old, C remains vital in modern software development: 
+    Operating Systems:
+    It is the backbone of major operating systems like Linux, as well as device drivers and compilers. 
+    Embedded Systems:
+    C's efficiency and hardware control make it the preferred language for programming microcontrollers and embedded systems in diverse fields. 
+    System Software:
+    Its core use in developing system-level software, such as browsers and utility programs, continues its relevance. 
+    Performance-Critical Applications:
+    For areas like scientific computing and game development, where speed is paramount, C's efficiency remains indispensable. 
+    Fundamental Programming Education:
+    Understanding C provides a strong foundation for aspiring programmers, fostering a deep comprehension of how software and hardware interact. 
+
+Q.2)Describe the steps to install a C compiler (e.g., GCC) and set up an Integrated Development Environment (IDE) like DevC++, VS Code, or CodeBlocks.
+=>  Installing a C compiler like GCC and setting up an IDE involves several steps, varying slightly depending on the chosen IDE and operating system.
+    1. Installing a C Compiler (GCC via MinGW for Windows):
+    Download MinGW-w64: Obtain the MinGW-w64 installer from a reliable source like SourceForge. This package includes GCC.
+    Run the Installer: Execute the downloaded installer.
+    Configure Installation: Choose the desired architecture (e.g., x86_64) and select the necessary components, including mingw32-gcc-g++ for C and C++ compilation.
+    Install: Proceed with the installation.
+    Add to PATH (Crucial): After installation, locate the bin folder within your MinGW installation directory (e.g., C:\MinGW\bin). Add this path to your system's PATH environment variable. This allows you to use gcc from the command line.
+    Windows: Right-click "This PC" > "Properties" > "Advanced system settings" > "Environment Variables." Under "System variables," find "Path," click "Edit," then "New," and paste the path to your MinGW bin directory. 
+    2. Setting up an Integrated Development Environment (IDE):
+    a) Dev-C++:
+    Download Dev-C++:
+    Download the Dev-C++ IDE, preferably the version bundled with MinGW/GCC.
+    Install:
+    Run the installer and follow the on-screen instructions. Dev-C++ typically auto-detects the MinGW compiler if installed correctly.
+    Create Project:
+    Open Dev-C++, go to "File" > "New" > "Project," and select "Console Application" for C/C++.
+    Write and Run Code:
+    Create a new source file, write your C code, and use the "Compile & Run" button (or F9) to execute.
+    b) VS Code:
+    Install VS Code:
+    Download and install Visual Studio Code from the official website.
+    Install C/C++ Extension Pack:
+    Open VS Code, go to the Extensions view (Ctrl+Shift+X), and search for and install the "C/C++ Extension Pack" by Microsoft.
+    Configure IntelliSense:
+    Open the Command Palette (Ctrl+Shift+P), search for "Select IntelliSense Configuration," and choose "Use gcc.exe" to configure.
+    Create and Run:
+    Create a new C source file (.c or .cpp), write your code. You can then use the "Run C/C++ File" option or configure tasks.json for more advanced build and run configurations.
+    c) CodeBlocks:
+    Download CodeBlocks (with MinGW):
+    Download the CodeBlocks installer that includes MinGW/GCC (e.g., codeblocks-XX.XXmingw-setup.exe).
+    Install:
+    Run the installer and follow the prompts. CodeBlocks will typically auto-detect the bundled compiler.
+    Create Project:
+    Open CodeBlocks, go to "File" > "New" > "Project," and select "Console Application." 
+    Write and Run Code:
+    Create a new source file, write your C code, and use the "Build and Run" button (or F9) to compile and execute.
+ 
+Q.3)Explain the basic structure of a C program, including headers, main function,comments, data types, and variables. Provide examples.
+=>   A C program follows a structured format for organization and execution.
+     1. Headers:
+     Header files contain declarations for functions and macros that are used in the program. They are included using the #include preprocessor directive.
+     #include <stdio.h> // Includes standard input/output library
+     #include <stdlib.h> // Includes standard library functions
+     2. Main Function:
+    The main() function is the entry point of every C program. Program execution begins here. 
+    It typically returns an integer value to indicate success (0) or failure (non-zero).
+    int main() {
+    // Program logic goes here
+    return 0; // Indicates successful execution
+    } 
+    3. Comments:
+    Comments are used to explain the code and are ignored by the compiler.
+    Single-line comments: Start with //.
+    Multi-line comments: Enclosed within /* and */.
+    // This is a single-line comment
+    /*
+    This is a
+    multi-line comment
+    */
+    4. Data Types:
+    Data types specify the type of data a variable can hold. Common data types include:
+    int: For integers (e.g., 5, -10).
+    float: For single-precision floating-point numbers (e.g., 3.14f).
+    double: For double-precision floating-point numbers (e.g., 3.14159).
+    char: For single characters (e.g., 'A', 'z').
+    int age = 30;
+    float price = 19.99f;
+    char grade = 'B';
+    5. Variables:
+    Variables are named storage locations that hold data. They must be declared with a data type before use.
+    int count; // Declares an integer variable named 'count'
+    count = 10; // Assigns a value to 'count'
+    Example program:
+    #include <stdio.h> // Include standard input/output library
+    int main() {
+    // Declare variables
+    int num1 = 5;
+    int num2 = 10;
+    int sum;
+
+    // Calculate the sum
+    sum = num1 + num2;
+
+    // Print the result to the console
+    printf("The sum of %d and %d is: %d\n", num1, num2, sum);
+
+    return 0; // Indicate successful execution
+    }
+
+Q.4)Write notes explaining each type of operator in C: arithmetic, relational, logical, assignment, increment/decrement, bitwise, and conditional operators.
+=>  Here are notes explaining each type of operator in C:
+    1. Arithmetic Operators:
+    These operators perform mathematical calculations.
+    +: Addition (e.g., a + b)
+    -: Subtraction (e.g., a - b)
+    *: Multiplication (e.g., a * b)
+    /: Division (e.g., a / b)
+    %: Modulus (returns the remainder of a division, e.g., a % b)
+    2. Relational Operators:
+    These operators compare two operands and return a boolean result (true or false, represented by 1 or 0 in C).
+    ==: Equal to (e.g., a == b)
+    !=: Not equal to (e.g., a != b)
+    >: Greater than (e.g., a > b)
+    <: Less than (e.g., a < b)
+    >=: Greater than or equal to (e.g., a >= b)
+    <=: Less than or equal to (e.g., a <= b)
+    3. Logical Operators:
+    These operators combine or modify boolean expressions.
+    &&: Logical AND (returns true if both operands are true, e.g., condition1 && condition2)
+    ||: Logical OR (returns true if at least one operand is true, e.g., condition1 || condition2)
+    !: Logical NOT (reverses the boolean value of an operand, e.g., !condition)
+    4. Assignment Operators:
+    These operators assign a value to a variable.
+    =: Simple assignment (e.g., x = 10)
+    +=, -=, *=, /=, %=: Compound assignment operators that perform an operation and then assign the result (e.g., x += 5 is equivalent to x = x + 5)
+    5. Increment/Decrement Operators:
+    These operators increase or decrease the value of a variable by one. 
+    ++: Increment (e.g., x++ or ++x)
+    Postfix (x++): Uses the current value of x in the expression, then increments x.
+    Prefix (++x): Increments x first, then uses the new value in the expression.
+    --: Decrement (e.g., x-- or --x)
+    Postfix (x--): Uses the current value of x in the expression, then decrements x.
+    Prefix (--x): Decrements x first, then uses the new value in the expression.
+    6. Bitwise Operators:
+    These operators perform operations on individual bits of integer operands.
+    &: Bitwise AND
+    |: Bitwise OR
+    ^: Bitwise XOR (exclusive OR)
+    ~: Bitwise NOT (one's complement)
+    <<: Left shift
+    >>: Right shift
+    7. Conditional Operator (Ternary Operator):
+    This operator provides a concise way to write an if-else statement.
+    condition ? expression_if_true : expression_if_false;
+    If condition is true, expression_if_true is evaluated and its result is returned.
+    If condition is false, expression_if_false is evaluated and its result is returned.
+
+Q.5)Explain decision-making statements in C (if, else, nested if-else, switch).Provide examples of each.
+=>  Decision-making statements in C allow programs to execute different blocks of code based on whether a specified condition evaluates to true or false.
+    1. if Statement:
+    The if statement executes a block of code only if a given condition is true. 
+    #include <stdio.h>
+    int main() {
+    int age = 20;
+    if (age >= 18) {
+        printf("You are eligible to vote.\n");
+    }
+    return 0;
+    }
+    2. if-else Statement:
+    The if-else statement executes one block of code if the condition is true and another block if the condition is false.
+    #include <stdio.h>
+    int main() {
+    int score = 75;
+    if (score >= 60) {
+        printf("You passed the exam.\n");
+    } else {
+        printf("You failed the exam.\n");
+    }
+    return 0;
+    }
+    3. Nested if-else Statement:
+    Nested if-else statements involve placing an if or if-else statement inside another if or else block, allowing for more complex conditional logic.
+    #include <stdio.h>
+    int main() {
+    int num = 15;
+    if (num > 0) {
+        printf("Number is positive.\n");
+        if (num % 2 == 0) {
+            printf("Number is even.\n");
+        } else {
+            printf("Number is odd.\n");
+        }
+    } else {
+        printf("Number is not positive.\n");
+    }
+    return 0;
+    }
+    4. switch Statement:
+    The switch statement allows for selecting one of many code blocks to be executed based on the value of a single variable or expression. It provides an alternative to a long if-else if ladder when dealing with multiple discrete options.
+    #include <stdio.h>
+    int main() {
+    char grade = 'B';
+    switch (grade) {
+        case 'A':
+            printf("Excellent!\n");
+            break;
+        case 'B':
+            printf("Very good.\n");
+            break;
+        case 'C':
+            printf("Good.\n");
+            break;
+        default:
+            printf("Needs improvement.\n");
+            break;
+    }
+    return 0;
+    }
+Q.6)Write a C program to check if a number is even or odd using an if-else statement. Extend the program using a switch statement to display the month name based on the user’s input (1 for January, 2 for February, etc.).
+=>  Here is a C program that checks if a number is even or odd using an if-else statement and then displays the month name based on user input using a switch statement.
+    #include<stdio.h>
+    int main()
+    {
+    int number;
+    printf("Enter the number : ");
+    scanf("%d",&number);
+    
+    if(number % 2 == 0){
+        printf(" %d Number is even ");
+    }
+    else{
+        printf(" %d Number is odd  ");
+    }
+    return 0;
+    }
+    // Part 2: Display month name using a switch statement
+    #include<stdio.h>
+    int main()
+    {
+    int monthNumber;
+    printf("Enter the month number (1-12) to dishplay its name : ");
+    scanf("%d",&monthNumber);
+    
+    switch(monthNumber){
+        case 1: 
+        printf("January\n");
+        break;
+        case 2:
+        printf("February\n");
+        break;
+        case 3:
+        printf("March\n");
+        break;
+        case 4:
+        printf("April\n");
+        break;
+        case 5:
+        printf("May\n");
+        break;
+        case 6:
+        printf("June\n");
+        break;
+        case 7:
+        printf("July\n");
+        break;
+        case 8:
+        printf("Augast\n");
+        break;
+        case 9:
+        printf("September\n");
+        break;
+        case 10:
+        printf("Octomber\n");
+        break;
+        case 11:
+        printf("Navember\n");
+        break;
+        case 12:
+        printf("December\n");
+        break;
+        default:
+        printf("Invalid number");
+        break;
+        }
+        return 0;
+        }
+Q.7)Compare and contrast while loops, for loops, and do-while loops. Explain the scenarios in which each loop is most appropriate.
+=>  While loops, for loops, and do-while loops are fundamental control flow structures in programming, each designed for repetitive execution of a block of code based on specific conditions.
+    Similarities:
+    All three types of loops facilitate iteration, allowing a block of code to be executed multiple times.
+    They all rely on a condition to determine whether the loop should continue or terminate.
+    Differences and Appropriate Scenarios:
+    1. While Loop:
+    Mechanism: Checks the condition before executing the loop body. If the condition is initially false, the loop body will not execute even once.
+    Appropriate Scenarios:
+    When the number of iterations is unknown and depends on a dynamic condition, such as reading data until the end of a file or waiting for a specific user input.
+    Syntax (C-style):
+    while (condition) {
+    // code block to be executed
+    }
+    int i = 0;
+    while (i < 5) {
+    printf("%d\n", i);
+    i++;
+    }
+    2. For Loop:
+    Mechanism: An entry-controlled loop designed for a fixed number of iterations or iterating over a sequence. It typically combines initialization, condition checking, and iteration update in a single statement.
+    Guaranteed Execution: Zero or more times. Like the while loop, if the initial condition is false, the loop body won't execute.
+    Syntax (C-style):
+    for (initialization; condition; update) {
+        // loop body
+    }
+    Appropriate Scenarios: When the number of iterations is known or can be easily determined, such as iterating through arrays, lists, or a specific range of numbers.
+    3. Do-While Loop:
+    Mechanism: An exit-controlled loop where the loop body executes at least once before the condition is checked. The loop continues as long as the condition evaluates to true.
+    Guaranteed Execution: At least one time.
+    Syntax (C-style):
+    do {
+        // loop body
+    } while (condition);
+    Appropriate Scenarios: When the loop body must execute at least once, regardless of the initial condition. 
+    Examples include menu-driven programs where the menu is displayed once before checking user input for continuation, or input validation where you need to prompt for input at least once. 
+    
+Q.8)Write a C program to print numbers from 1 to 10 using all three types of loops(while, for, do-while).
+=>  while loop:
+    #include<stdio.h>
+    int main()
+    {
+    int i=0;
+    while(i<=10){
+        printf("%d\n",i);
+        i++;
+    }
+    return 0;
+    }
+
+    for loop:
+    #include<stdio.h>
+    int main()
+    {
+    for(int i=0;i<=10;i++){
+        printf("%d\n",i);
+        }
+        return 0;
+    }
+    
+    do while loop:
+    #include<stdio.h>
+    int main()
+    {
+      int i=0;
+      do{
+          printf("%d\n",i);
+          i++;
+         }
+       while(i<=10);
+    return 0;
+    }
+Q.9)Explain the use of break, continue, and goto statements in C. Provide examples of each.
+=>  In C programming, break, continue, and goto are jump statements used to alter the normal flow of program execution.
+    break Statement:
+    The break statement is used to terminate the execution of the innermost switch statement or loop (for, while, do-while) in which it appears. 
+    Control is then transferred to the statement immediately following the terminated block. 
+    Example:
+    #include <stdio.h>
+    int main() {
+    for (int i = 1; i <= 5; i++) {
+        if (i == 3) {
+            break; // Exit the loop when i is 3
+        }
+        printf("%d ", i);
+    }
+    printf("\nLoop terminated.\n");
+    return 0;
+    }
+    output:
+    1 2
+    Loop terminated
+
+continue Statement: The continue statement is used to skip the remaining statements in the current iteration of a loop and proceed to the next iteration. 
+                    It does not terminate the loop entirely.
+    Example:
+    #include<stdio.h>
+    int main(){
+    for(int i=0;i<=5;i++){
+      if(i==3){
+       continue; // skip printing when i is 3
+        }
+       printf("%d",i);
+       }
+       printf("Loop finished");
+       return 0;
+       }   
+    output:
+    1 2 4 5
+    Loop finished
+    
+ goto Statement: The goto statement provides an unconditional jump to a labeled statement within the same function. 
+                 It is generally discouraged in structured programming as it can lead to less readable and harder-to-debug code, often referred to as "spaghetti code." 
+    Example:
+    #include<stdio.h>
+    int main(){
+    int num =10;
+     if(num>5){
+     goto print_message;// jump to the labale
+     }
+      printf("This mesage will not be print");
+      print_message: // label defination 
+      printf("Number is greater than 5. \n");
+      return 0;
+     }
+     output:
+     Number is greater than 5.  
+     
+Q.10)Write a C program that uses the break statement to stop printing numbers when it reaches 5. Modify the program to skip printing the number 3 using the continue statement.
+=>   #include<stdio.h>
+     int main(){
+     for(int i=0;i<=10;i++){
+     if(i==5){
+       break; // stop number printing when it reaches 5.
+     }
+     if(i==3){
+      continue; // skip printing when number is 3.
+     }
+     printf("%d",i);
+     }
+      printf("\n");
+     return 0;
+     }
+     output: 0 1 2 4
+
+Q.11)What are functions in C? Explain function declaration, definition, and how to call a function. Provide examples.
+=>   In C programming, functions are self-contained blocks of code designed to perform a specific task. They promote modularity, reusability, and readability in programs.
+     1. Function Declaration :
+     A function declaration, also known as a function prototype, informs the compiler about a function's name, return type, and parameters before its actual definition. 
+     This allows the compiler to check for correct usage when the function is called.
+     Syntax: return_type function_name(parameter_type1 parameter1, parameter_type2 parameter2, ...);
+     Example: int add(int a, int b); // Declares a function named 'add' that takes two integers and returns an integer.
+     2. Function Definition:
+     The function definition provides the actual implementation or body of the function. It specifies what the function does when called. 
+     return_type function_name(parameter_type1 parameter1, parameter_type2 parameter2, ...) {
+     // Body of the function
+     // Statements to perform the task
+     return value; // If the function has a non-void return type
+     }
+     Example:
+     int add(int a, int b) {
+     return a + b; // Defines the 'add' function to return the sum of 'a' and 'b'.
+     }
+     3. Function Call:
+     A function call is the mechanism to execute the code within a function. It involves using the function's name followed by parentheses containing the arguments (actual values passed to the parameters).
+     function_name(argument1, argument2, ...);
+     Example:
+     #include<stdio.h>
+// function declaration
+int add(int a,int b);
+int main()
+{
+    int a=0;
+    int b=0;
+    printf("Enter the first value : ");
+    scanf("%d",&a);
+    printf("Enter the second value : ");
+    scanf("%d",&b);
+    // function calling
+    add(a,b);
+    return 0;
+}
+// function definition
+int add(int a,int b){
+    int add;
+    add = a + b;
+    printf("Addition of two numbers are : %d",add);
+}
+OUTPUT: 
+Enter the first value : 10
+Enter the second value : 10
+Addition of two numbers are : 20
+
+Q.12)Write a C program that calculates the factorial of a number using a function.Include function declaration, definition, and call.
+=>  #include<stdio.h>
+    int factorial(int n);
+    int main(){
+    int a=0;
+    printf("Enter the number :");
+    scanf("%d",&a);
+    printf("Factorial of %d is %d",a,factorial(a));
+    return 0;
+    }
+    int factorial(int n){
+    if(n==0 || n==1){
+     return 1;
+    }else{
+          return n * factorial(n-1);
+    } 
+OUTPUT: Enter the number : 5
+        The factorial 5 is 120
+
+Q.13)Explain the concept of arrays in C. Differentiate between one-dimensional and multi-dimensional arrays with examples. 
+=>   In C programming, an array is a collection of elements of the same data type stored in contiguous memory locations, accessed by a common name and an index. 
+     Arrays provide a convenient way to store and manage multiple values of the same type under a single variable name.
+     One-Dimensional Arrays:
+     A one-dimensional array (or 1D array) is a linear collection of elements, similar to a list. Each element is accessed using a single index.
+     Example:
+     #inclue<stdio.h>
+     int main(){
+     int arr[5]={1,2,3,4,5};
+     for(int i=0;i<5;i++){
+     printf("%d",arr[i]);
+     return 0;
+     }
+OUTPUT: 12345
+ 
+    Multi-Dimensional Arrays
+    A multi-dimensional array is an array of arrays, representing data in a tabular or grid-like structure (e.g., rows and columns for a 2D array). 
+    Elements are accessed using multiple indices, one for each dimension.
+    Example: 2D Array
+    #include<stdio.h>
+    int arr[3][4]={{1,2,3,4,},
+                   {5,6,7,8},
+                   {9,10,11,12}
+                   };
+    printf("%d",arr[2][3]);
+    return 0;
+    }
+OUTPUT: 12
+
+Q.14)Write a C program that stores 5 integers in a one-dimensional array and prints them. Extend this to handle a two-dimensional array (3x3 matrix) and
+calculate the sum of all elements.
+=> #include<stdio.h>
+   int main(){
+   int oneDarray[5]={10,20,30,40,50};
+   for(int i=0; i<5; i++){
+   printf("%d ",oneDarray[i]);
+   }
+   // Now 2D Array:
+   int twoDarray[3][3]={
+    {1,2,3},
+    {4,5,6},
+    {7,8,9}
+     };
+     printf("\n\n");
+     // sum of this 2D aaray
+     int sum=0;
+     printf("Enter the 2D matrix:\n");
+     for(int i=0; i<3; i++){
+      for(int j=0; j<3; j++){
+        printf("%d ",twoDarray[i][j]);
+         sum = sum + twoDarray[i][j];
+        }
+        printf("\n");
+        }
+        printf("Sum of two dimentional array is: %d",sum);
+        return 0;
+      }
+OUTPUT: 10 20 30 40 50 
+
+Enter the 2D matrix:
+1 2 3 
+4 5 6 
+7 8 9 
+Sum of two dimentional array is: 45  
+
+Q.15) Explain what pointers are in C and how they are declared and initialized. Why are pointers important in C?      
+=> Pointers in C:
+   A pointer in C is a variable that stores the memory address of another variable. 
+   Instead of holding a direct value, it holds a reference to where a value is stored in memory.
+   Declaration and Initialization:
+   Pointers are declared using an asterisk (*) before the variable name, indicating that it's a pointer to a specific data type.
+   // Declaration of an integer pointer
+   int *ptr_int; 
+
+  // Declaration of a character pointer
+  char *ptr_char;  
+  Pointers are initialized by assigning them the memory address of another variable using the address-of operator (&).
+  int num = 10;
+  int *ptr_int = &num; // ptr_int now stores the memory address of num     
+  Importance of Pointers in C:-
+  Memory Management: Pointers are fundamental for dynamic memory allocation (using malloc, calloc, realloc, and free), allowing programs to allocate and deallocate memory during runtime as needed.
+  Data Structures: Complex data structures such as linked lists, trees, and graphs heavily rely on pointers to link nodes and manage relationships between data elements.
+  Arrays and Strings: Pointers and arrays are closely related in C. An array name often behaves like a pointer to its first element, and pointers can be used to traverse and manipulate array elements efficiently.
+  Function Pointers: Pointers can also point to functions, enabling advanced programming techniques like callback functions and implementing polymorphic behavior.
+
+Q.16)Write a C program to demonstrate pointer usage. Use a pointer to modify the value of a variable and print the result.
+=>  #include <stdio.h>
+    int main() {
+    int original_value = 10; // Declare and initialize an integer variable
+    int *ptr_to_value;       // Declare a pointer to an integer
+
+    // Print the original value
+    printf("Original value: %d\n", original_value);
+
+    // Assign the address of original_value to the pointer
+    ptr_to_value = &original_value;
+
+    // Modify the value of original_value using the pointer
+    // The dereference operator (*) accesses the value at the memory address
+    *ptr_to_value = 25;
+
+    // Print the value after modification using both the variable and the pointer
+    printf("Value after modification (accessed via variable): %d\n", original_value);
+    printf("Value after modification (accessed via pointer): %d\n", *ptr_to_value);
+
+    return 0;
+}
+ 
+OUTPUT: Origional value is : 10 
+Value after modification (accessed via variable): 25
+Value after modification (accessed via pointer): 25
+
+Q.17)Explain string handling functions like strlen(), strcpy(), strcat(),strcmp(), and strchr(). Provide examples of when these functions are useful.
+=>   String handling functions in C, found in the <string.h> header, provide tools for manipulating character arrays as strings.
+     1. strlen():
+     Purpose: Calculates the length of a string (number of characters before the null terminator \0).
+     Example:
+     #include<stdio.h>
+     #include<string.h>
+     int main(){
+     char str[]="Hello";
+     printf("Length of this string is : %d",strlen(str));
+     return 0;
+     }
+OUTPUT: Length of this string is : 5
+     
+     2. strcpy():
+     Purpose: Copies the content of one string (source) to another (destination).  
+     Assigning a new value to a string variable or creating a copy of a string.
+     Example:
+     #include<stdio.h>
+     #include<string.h>
+     int main(){
+     char source[]="World";
+     char destination[20]; //ensure destination has enough space
+     strcpy(destination, source);
+     printf("Copied string is : %s",destination);
+     return 0;
+     }
+OUTPUT: Copied string is : World
+     
+     3. strcat():
+     Purpose: Concatenates (joins) two strings, appending the source string to the end of the destination string.
+     Example:
+     #include<stdio.h>
+     #include<string.h>
+     int main(){
+     char str1[]="Hello ";
+     char str2[]="world";
+     strcat(str1, str2);
+     printf("Concatenated string: %s\n ", str1);
+     return 0;
+     }
+OUTPUT: Concatenated string: Hello world
+
+     4. strcmp():
+     Purpose: Compares two strings lexicographically (alphabetically).
+     Return Value:
+     0 if strings are equal.
+     A negative value if the first string is lexicographically smaller.
+     A positive value if the first string is lexicographically larger.
+     Example:
+     #include<stdio.h>
+     #include<string.h>
+     int main(){
+    char str1[]="Apple";
+    char str2[]="Banana";
+    char str3[]="Apple";
+    if(strcmp(str1, str3) == 0){
+        printf("str1 and str3 are equal: %s\n ");
+        }
+        if(strcmp(str1, str2) < 0){
+            printf("str1 is smaller than str2 : %s\n");
+        }
+    return 0;
+}
+OUTPUT: str1 and str3 are equal: Apple
+        str1 is smaller than str2 : Banana
+
+     5. strchr():
+     Purpose: Searches for the first occurrence of a specific character within a string.
+     Return Value: A pointer to the first occurrence of the character, or NULL if not found.
+     Example: 
+     #include <stdio.h>
+     #include <string.h>
+     int main() {
+     char str[] = "programming";
+     char *ptr = strchr(str, 'g');
+     if (ptr != NULL) {
+        printf("First 'g' found at position: %ld\n", ptr - str); // Output: First 'g' found at position: 4
+      } else {
+        printf("'g' not found.\n");
+     }
+     return 0;
+    } 
+OUTPUT: First 'g' found at position: 3
+
+Q.18) Write a C program that takes two strings from the user and concatenates them using strcat(). 
+      Display the concatenated string and its length using strlen().
+=>    #include <stdio.h>
+      #include <string.h>
+      int main() {
+      char str1[200]; 
+      char str2[100];
+
+      printf("Enter the first string: ");
+      fgets(str1, sizeof(str1), stdin);
+    
+      str1[strcspn(str1, "\n")] = '\0';
+
+      printf("Enter the second string: ");
+      fgets(str2, sizeof(str2), stdin);
+      str2[strcspn(str2, "\n")] = '\0';
+
+      // Concatenate str2 to str1
+      strcat(str1, str2);
+
+      // Display result
+      printf("Concatenated String: %s\n", str1);
+      printf("Length of Concatenated String: %lu\n", strlen(str1));
+      return 0;
+      }
+OUTPUT: Enter the first string: vraj
+        Enter the second string: patel
+        Concatenated String: vrajpatel
+        Length of Concatenated String: 9
+
+Q.19)Explain the concept of structures in C. Describe how to declare, initialize, and access structure members.
+=>   In C programming, a structure (struct) is a user-defined data type that allows grouping variables of different data types under a single name. 
+     This enables the representation of a single entity with multiple, related attributes.  
+     Declaring a Structure:
+     A structure is declared using the struct keyword, followed by the structure's tag name and a block containing its member variables:
+     Example:
+     struct Student {
+     int id;
+     char name[50];
+     float percentage;
+     };
+     This defines a Student structure with three members: id (integer), name (character array), and percentage (float).
+     Initializing a Structure: Structures can be initialized during their declaration or after.
+     1. During Declaration (Sequential Initialization):
+     struct Student student1 = {101, "Alice", 88.5};
+     The values are assigned to members in the order they are declared within the structure.
+     2. During Declaration (Designated Initialization - C99 and later):
+     struct Student student2 = {.name = "Bob", .id = 102, .percentage = 75.0};
+     This allows initializing members by name, in any order.
+     3. After Declaration:
+     struct Student student3;
+     student3.id = 103;
+     strcpy(student3.name, "Charlie"); // For character arrays, use strcpy
+     student3.percentage = 92.1;
+     Accessing Structure Members
+     Members of a structure are accessed using the dot operator (.) with the structure variable.
+     struct Student student1 = {101, "Alice", 88.5};
+     printf("Student ID: %d\n", student1.id);
+     printf("Student Name: %s\n", student1.name);
+     printf("Student Percentage: %.2f\n", student1.percentage);
+     
+     When working with pointers to structures, the arrow operator (->) is used to access members.
+     struct Student *ptrStudent = &student1;
+     printf("Student ID (via pointer): %d\n", ptrStudent->id);
+ 
+Q.20)Write a C program that defines a structure to store a student's details (name, roll number, and marks). 
+     Use an array of structures to store details of 3students and print them.
+=>   #include <stdio.h>
+#include <string.h> 
+// Define the Student structure
+struct Student {
+    char name[50];
+    int roll_number;
+    float marks;
+};
+
+int main() {
+    // Declare an array of 3 Student structures
+    struct Student students[3];
+    int i;
+
+    // Input details for 3 students
+    printf("Enter details for 3 students:\n");
+    for (i = 0; i < 3; i++) {
+        printf("\nStudent %d:\n", i + 1);
+        printf("Enter Name: ");
+        // Using fgets to read name with spaces
+        fgets(students[i].name, sizeof(students[i].name), stdin);
+        // Remove the trailing newline character added by fgets
+        students[i].name[strcspn(students[i].name, "\n")] = 0;
+
+        printf("Enter Roll Number: ");
+        scanf("%d", &students[i].roll_number);
+
+        printf("Enter Marks: ");
+        scanf("%f", &students[i].marks);
+
+        // Clear the input buffer after reading numerical values
+        while (getchar() != '\n');
+    }
+
+    // Print the details of the 3 students
+    printf("\n--- Student Details ---\n");
+    for (i = 0; i < 3; i++) {
+        printf("\nStudent %d:\n", i + 1);
+        printf("Name: %s\n", students[i].name);
+        printf("Roll Number: %d\n", students[i].roll_number);
+        printf("Marks: %.2f\n", students[i].marks);
+    }
+
+    return 0;
+}
+OUTPUT: Enter details for 3 students:
+
+Student 1:
+Enter Name: xyz
+Enter Roll Number: 01
+Enter Marks: 78
+
+Student 2:
+Enter Name: sappy
+Enter Roll Number: 012
+Enter Marks: 89
+
+Student 3:
+Enter Name: michal
+Enter Roll Number: 013
+Enter Marks: 88
+
+--- Student Details ---
+
+Student 1:
+Name: xyz
+Roll Number: 1
+Marks: 78.00
+
+Student 2:
+Name: sappy
+Roll Number: 12
+Marks: 89.00
+
+Student 3:
+Name: michal
+Roll Number: 13
+Marks: 88.00
+
+Q.21)Explain the importance of file handling in C. Discuss how to perform file operations like opening, closing, reading, and writing files.
+=>   File handling in C is crucial for persistent data storage and retrieval, allowing programs to interact with data stored on a computer's file system beyond the program's execution. 
+     This enables applications to manage databases, store user settings, log events, and process large datasets efficiently.
+     File Operations in C:
+     opening a file:
+     The fopen() function opens a file and returns a file pointer (FILE *).
+     FILE *fp;
+     fp = fopen("filename.txt", "mode");
+     filename.txt: The name or path of the file to open.
+     mode: Specifies the access mode (e.g., "r" for read, "w" for write, "a" for append, "rb" for binary read, "wb" for binary write). 
+           If the file doesn't exist and opened in "w" or "a" mode, it will be created.
+     Closing a File:
+     The fclose() function closes the file associated with the given file pointer, releasing system resources.
+     fclose(fp);
+     It is essential to close files after use to prevent data loss, memory leaks, and other issues.
+     Reading from a File:
+     Character by Character: fgetc() reads a single character.
+     char ch = fgetc(fp);
+     Formatted Input: fscanf() reads formatted data.
+     int num;
+     fscanf(fp, "%d", &num);
+     String Input: fgets() reads a line of text.
+     char buffer[100];
+     fgets(buffer, sizeof(buffer), fp);
+     Binary Data: fread() reads blocks of binary data.
+     struct Data myData;
+     fread(&myData, sizeof(struct Data), 1, fp);
+     Writing to a File:
+     Character by Character: fputc() writes a single character.
+     fputc('A', fp);
+     Formatted Output: fprintf() writes formatted data.
+     int num = 123;
+     fprintf(fp, "The number is: %d\n", num);
+     String Output: fputs() writes a string.
+     fputs("Hello, File!\n", fp);
+     Binary Data: fwrite() writes blocks of binary data.
+     struct Data myData = {10, 20};
+     fwrite(&myData, sizeof(struct Data), 1, fp);
+ 
+Q.22)Write a C program that acts as a simple calculator. The program should take two numbers and an operator as input from the user and perform the respective operation (addition, subtraction, multiplication, division, or modulus) using operators.
+     Challenge: Extend the program to handle invalid operator inputs.
+=> #include <stdio.h>
+   int main() {
+    char operator;
+    double num1, num2, result;
+
+    // Prompt user for input
+    printf("Enter an operator (+, -, *, /, %%): ");
+    scanf(" %c", &operator);
+
+    printf("Enter two numbers: ");
+    scanf("%lf %lf", &num1, &num2);
+
+    // Use a switch statement to perform the calculation
+    switch (operator) {
+        case '+':
+            result = num1 + num2;
+            printf("%.2lf + %.2lf = %.2lf\n", num1, num2, result);
+            break;
+
+        case '-':
+            result = num1 - num2;
+            printf("%.2lf - %.2lf = %.2lf\n", num1, num2, result);
+            break;
+
+        case '*':
+            result = num1 * num2;
+            printf("%.2lf * %.2lf = %.2lf\n", num1, num2, result);
+            break;
+
+        case '/':
+            // Handle division by zero
+            if (num2 != 0) {
+                result = num1 / num2;
+                printf("%.2lf / %.2lf = %.2lf\n", num1, num2, result);
+            } else {
+                printf("Error: Cannot divide by zero.\n");
+            }
+            break;
+
+        case '%':
+            // The modulus operator (%) works only with integers.
+            // Check for division by zero before performing the operation.
+            if (num2 != 0) {
+                // To use modulus with doubles, they must be casting to integers.
+                result = (int)num1 % (int)num2;
+                printf("%d %% %d = %d\n", (int)num1, (int)num2, (int)result);
+            } else {
+                printf("Error: Cannot perform modulus with a divisor of zero.\n");
+            }
+            break;
+
+        // Handle invalid operator input
+        default:
+            printf("Error: Invalid operator entered. Please use +, -, *, /, or %%.\n");
+            break;
+    }
+
+    return 0;
+}
+
+Q.23)Write a C program that takes an integer from the user and checks the following using different operators:
+     Whether the number is even or odd.
+     Whether the number is positive, negative, orzero. o Whether the number is a multiple of both 3 and 5.
+=>   
+    #include <stdio.h>
+    int main() {
+    int number;
+
+    // Get input from the user
+    printf("Enter an integer: ");
+    scanf("%d", &number);
+
+    // Check if the number is even or odd using the modulo operator (%)
+    if (number % 2 == 0) {
+        printf("The number is Even.\n");
+    } else {
+        printf("The number is Odd.\n");
+    }
+
+    // Check if the number is positive, negative, or zero using relational operators (>, <, ==)
+    if (number > 0) {
+        printf("The number is Positive.\n");
+    } else if (number < 0) {
+        printf("The number is Negative.\n");
+    } else {
+        printf("The number is Zero.\n");
+    }
+
+    // Check if the number is a multiple of both 3 and 5 using the logical AND operator (&&)
+    if (number % 3 == 0 && number % 5 == 0) {
+        printf("The number is a multiple of both 3 and 5.\n");
+    } else {
+        printf("The number is not a multiple of both 3 and 5.\n");
+    }
+
+    return 0;
+}
+
+Q.24)Write a C program that takes the marks of a student as input and displays the corresponding grade based on the following conditions:
+o Marks > 90: Grade A
+o Marks > 75 and <= 90: Grade B
+o Marks > 50 and <= 75: Grade C
+o Marks <= 50: Grade D
+ Use if-else or switch statements for the decision-making process.
+
+=> #include <stdio.h>
+
+int main() {
+    int marks;
+
+    // Prompt the user to enter marks
+    printf("Enter the student's marks: ");
+    scanf("%d", &marks);
+
+    // Determine and display the grade based on the marks
+    if (marks > 90) {
+        printf("Grade: A\n");
+    } else if (marks > 75 && marks <= 90) {
+        printf("Grade: B\n");
+    } else if (marks > 50 && marks <= 75) {
+        printf("Grade: C\n");
+    } else { // marks <= 50
+        printf("Grade: D\n");
+    }
+
+    return 0;
+}
+
+Q.25)Write a C program that takes three numbers from the user and determines:
+o The largest number.
+o The smallest number.
+Challenge: Solve the problem using both if-else and switch-case statements.
+
+=> 1. Using if-else statements:
+#include <stdio.h>
+
+int main() {
+    int num1, num2, num3;
+    int largest, smallest;
+
+    printf("Enter three numbers: ");
+    scanf("%d %d %d", &num1, &num2, &num3);
+
+    // Finding the largest number
+    if (num1 >= num2 && num1 >= num3) {
+        largest = num1;
+    } else if (num2 >= num1 && num2 >= num3) {
+        largest = num2;
+    } else {
+        largest = num3;
+    }
+
+    // Finding the smallest number
+    if (num1 <= num2 && num1 <= num3) {
+        smallest = num1;
+    } else if (num2 <= num1 && num2 <= num3) {
+        smallest = num2;
+    } else {
+        smallest = num3;
+    }
+
+    printf("The largest number is: %d\n", largest);
+    printf("The smallest number is: %d\n", smallest);
+
+    return 0;
+}
+
+2. Using switch-case statements (for the largest number):
+ 
+#include <stdio.h>
+#include <stdbool.h> // For using bool type
+
+int main() {
+    int num1, num2, num3;
+    int largest;
+
+    printf("Enter three numbers: ");
+    scanf("%d %d %d", &num1, &num2, &num3);
+
+    // Finding the largest number using nested switch-case
+    switch (num1 >= num2 && num1 >= num3) {
+        case true:
+            largest = num1;
+            break;
+        case false:
+            switch (num2 >= num1 && num2 >= num3) {
+                case true:
+                    largest = num2;
+                    break;
+                case false:
+                    largest = num3;
+                    break;
+            }
+            break;
+    }
+
+    printf("The largest number is: %d\n", largest);
+
+    // Finding the smallest number using nested switch-case (similar logic)
+    int smallest;
+    switch (num1 <= num2 && num1 <= num3) {
+        case true:
+            smallest = num1;
+            break;
+        case false:
+            switch (num2 <= num1 && num2 <= num3) {
+                case true:
+                    smallest = num2;
+                    break;
+                case false:
+                    smallest = num3;
+                    break;
+            }
+            break;
+    }
+
+    printf("The smallest number is: %d\n", smallest);
+
+    return 0;
+}
+
+Q.26)Write a C program that checks whether a given number is a prime number or not using a for loop.
+Challenge: Modify the program to print all prime numbers between 1 and a given number.
+=>
+#include <stdio.h>
+#include <stdbool.h> // For using boolean type
+
+// Function to check if a number is prime
+bool isPrime(int num) {
+    if (num <= 1) {
+        return false; // 0 and 1 are not prime numbers
+    }
+    // Check for divisibility from 2 up to num/2
+    
+    for (int i = 2; i <= num / 2; i++) {
+        if (num % i == 0) {
+            return false; // Found a divisor, so it's not prime
+        }
+    }
+    return true; // No divisors found, so it's prime
+}
+
+int main() {
+    int num_to_check;
+
+    // Part 1: Check if a single number is prime
+    printf("Enter a number to check if it's prime: ");
+    scanf("%d", &num_to_check);
+
+    if (isPrime(num_to_check)) {
+        printf("%d is a prime number.\n", num_to_check);
+    } else {
+        printf("%d is not a prime number.\n", num_to_check);
+    }
+
+    // Part 2: Print all prime numbers between 1 and a given number
+    int upper_limit;
+    printf("\nEnter an upper limit to find prime numbers (e.g., 100): ");
+    scanf("%d", &upper_limit);
+
+    printf("Prime numbers between 1 and %d are: ", upper_limit);
+    for (int i = 2; i <= upper_limit; i++) {
+        if (isPrime(i)) {
+            printf("%d ", i);
+        }
+    }
+    printf("\n");
+
+    return 0;
+}
+
+Q.27)Write a C program that takes an integer input from the user and prints its multiplication table using a for loop.
+Challenge: Allow the user to input the range of the multiplication table (e.g., from 1 to N).
+=>
+#include <stdio.h>
+
+int main() {
+    int number, start_range, end_range;
+
+    // Get the number from the user
+    printf("Enter an integer to print its multiplication table: ");
+    scanf("%d", &number);
+
+    // Get the starting range from the user
+    printf("Enter the starting point of the multiplication table range: ");
+    scanf("%d", &start_range);
+
+    // Get the ending range from the user
+    printf("Enter the ending point of the multiplication table range: ");
+    scanf("%d", &end_range);
+
+    // Validate the range
+    if (start_range > end_range) {
+        printf("Error: The starting range cannot be greater than the ending range.\n");
+        return 1; // Indicate an error
+    }
+
+    printf("\nMultiplication Table of %d (from %d to %d):\n", number, start_range, end_range);
+
+    // Print the multiplication table using a for loop
+    for (int i = start_range; i <= end_range; i++) {
+        printf("%d x %d = %d\n", number, i, number * i);
+    }
+
+    return 0; // Indicate successful execution
+}
+OUTPUT: Enter an integer to print its multiplication table: 2
+        Enter the starting point of the multiplication table range: 
+        Enter the ending point of the multiplication table range: 5
+        Multiplication Table of 2 (from 1 to 5):
+2 x 1 = 2
+2 x 2 = 4
+2 x 3 = 6
+2 x 4 = 8
+2 x 5 = 10
+ 
+Q.28)Write a C program that takes an integer from the user and calculates the sum of its digits using a while loop.
+Challenge: Extend the program to reverse the digits of the number.
+=> #include <stdio.h>
+
+int main() {
+    int number, originalNumber, digit, sum = 0, reversed = 0;
+
+    // Input from user
+    printf("Enter an integer: ");
+    scanf("%d", &number);
+
+    // Store original number for display later
+    originalNumber = number;
+
+    // Handle negative numbers by converting to positive
+    if (number < 0) {
+        number = number;
+    }
+
+    // While loop to compute sum and reverse of digits
+    while (number != 0) {
+        digit = number % 10;           // Extract last digit
+        sum += digit;                  // Add digit to sum
+        reversed = reversed * 10 + digit; // Build reversed number
+        number = number / 10;          // Remove last digit
+    }
+
+    // Display the results
+    printf("Sum of digits of %d is: %d\n", originalNumber, sum);
+    
+    // Adjust reversed number if original was negative
+    if (originalNumber < 0) {
+        reversed = reversed;
+    }
+
+    printf("Reversed number is: %d\n", reversed);
+
+    return 0;
+}
+OUTPUT: Enter an integer: 123
+        Sum of digits of 123 is: 6
+        Reversed number is: 321
+
+Q.29)Write a C program that accepts 10 integers from the user and stores them in an array.
+    The program should then find and print the maximum and minimum values in the array.
+    Challenge: Extend the program to sort the array in ascending order.
+=> #include <stdio.h>
+
+#define SIZE 10
+
+int main() {
+    int numbers[SIZE];
+    int i, max, min, temp;
+
+    // Input 10 integers
+    printf("Enter 10 integers:\n");
+    for (i = 0; i < SIZE; i++) {
+        printf("Element %d: ", i + 1);
+        scanf("%d", &numbers[i]);
+    }
+
+    // Initialize max and min
+    max = min = numbers[0];
+
+    // Find max and min
+    for (i = 1; i < SIZE; i++) {
+        if (numbers[i] > max) {
+            max = numbers[i];
+        }
+        if (numbers[i] < min) {
+            min = numbers[i];
+        }
+    }
+
+    // Display max and min
+    printf("\nMaximum value: %d\n", max);
+    printf("Minimum value: %d\n", min);
+
+    // Challenge: Sort the array in ascending order (using Bubble Sort)
+    for (i = 0; i < SIZE - 1; i++) {
+        for (int j = 0; j < SIZE - i - 1; j++) {
+            if (numbers[j] > numbers[j + 1]) {
+                // Swap
+                temp = numbers[j];
+                numbers[j] = numbers[j + 1];
+                numbers[j + 1] = temp;
+            }
+        }
+    }
+
+    // Display sorted array
+    printf("\nSorted array in ascending order:\n");
+    for (i = 0; i < SIZE; i++) {
+        printf("%d ", numbers[i]);
+    }
+    printf("\n");
+
+    return 0;
+}
+OUTPUT: Enter 10 integers:
+Element 1: 1
+Element 2: 2
+Element 3: 3
+Element 4: 4
+Element 5: 5
+Element 6: 6
+Element 7: 7
+Element 8: 8
+Element 9: 9
+Element 10: 10
+
+Maximum value: 10
+Minimum value: 1
+
+Sorted array in ascending order:
+1 2 3 4 5 6 7 8 9 10 
+
+Q.30)Write a C program that accepts two 2x2 matrices from the user and adds them. Display the resultant matrix.
+Challenge: Extend the program to work with 3x3 matrices and matrix multiplication.
+=> #include <stdio.h>
+
+// Function to input matrix elements
+void inputMatrix(int rows, int cols, int matrix[3][3]) {
+    for (int i = 0; i < rows; i++) {
+        for (int j = 0; j < cols; j++) {
+            printf("Enter element [%d][%d]: ", i, j);
+            scanf("%d", &matrix[i][j]);
+        }
+    }
+}
+
+// Function to display matrix
+void displayMatrix(int rows, int cols, int matrix[3][3]) {
+    for (int i = 0; i < rows; i++) {
+        for (int j = 0; j < cols; j++) {
+            printf("%d\t", matrix[i][j]);
+        }
+        printf("\n");
+    }
+}
+
+int main() {
+    int matrix1[3][3], matrix2[3][3], sumMatrix[3][3], productMatrix[3][3];
+    int r1, c1, r2, c2;
+
+    // Get dimensions for Matrix 1
+    printf("Enter number of rows for Matrix 1 (max 3): ");
+    scanf("%d", &r1);
+    printf("Enter number of columns for Matrix 1 (max 3): ");
+    scanf("%d", &c1);
+
+    // Get dimensions for Matrix 2
+    printf("Enter number of rows for Matrix 2 (max 3): ");
+    scanf("%d", &r2);
+    printf("Enter number of columns for Matrix 2 (max 3): ");
+    scanf("%d", &c2);
+
+    // Input elements for Matrix 1
+    printf("\nEnter elements for Matrix 1:\n");
+    inputMatrix(r1, c1, matrix1);
+
+    // Input elements for Matrix 2
+    printf("\nEnter elements for Matrix 2:\n");
+    inputMatrix(r2, c2, matrix2);
+
+    // Matrix Addition
+    if (r1 == r2 && c1 == c2) {
+        printf("\nMatrix Addition:\n");
+        for (int i = 0; i < r1; i++) {
+            for (int j = 0; j < c1; j++) {
+                sumMatrix[i][j] = matrix1[i][j] + matrix2[i][j];
+            }
+        }
+        displayMatrix(r1, c1, sumMatrix);
+    } else {
+        printf("\nMatrix addition is not possible (dimensions mismatch).\n");
+    }
+
+    // Matrix Multiplication
+    if (c1 == r2) {
+        printf("\nMatrix Multiplication:\n");
+        for (int i = 0; i < r1; i++) {
+            for (int j = 0; j < c2; j++) {
+                productMatrix[i][j] = 0; // Initialize element to 0
+                for (int k = 0; k < c1; k++) {
+                    productMatrix[i][j] += matrix1[i][k] * matrix2[k][j];
+                }
+            }
+        }
+        displayMatrix(r1, c2, productMatrix);
+    } else {
+        printf("\nMatrix multiplication is not possible (columns of first matrix must equal rows of second).\n");
+    }
+
+    return 0;
+}
+OUTPUT:
+Enter number of rows for Matrix 1 (max 3): 2
+Enter number of columns for Matrix 1 (max 3): 3
+Enter number of rows for Matrix 2 (max 3): 3
+Enter number of columns for Matrix 2 (max 3): 2
+
+Enter elements for Matrix 1:
+Enter element [0][0]: 1
+Enter element [0][1]: 2
+Enter element [0][2]: 3
+Enter element [1][0]: 4
+Enter element [1][1]: 5
+Enter element [1][2]: 6
+
+Enter elements for Matrix 2:
+Enter element [0][0]: 7
+Enter element [0][1]: 8
+Enter element [1][0]: 9
+Enter element [1][1]: 10
+Enter element [2][0]: 11
+Enter element [2][1]: 12
+
+Matrix multiplication:
+58	64
+139	154
+
+Q.31)Write a C program that takes N numbers from the user and stores them in an array. 
+    The program should then calculate and display the sum of all array elements.
+    Challenge: Modify the program to also find the average of the numbers.
+=> #include <stdio.h>
+
+int main() {
+    int N;
+
+    // Ask the user for the number of elements
+    printf("Enter the number of elements: ");
+    scanf("%d", &N);
+
+    // Validate N
+    if (N <= 0 || N > 1000) {
+        printf("Invalid number of elements. Please enter a value between 1 and 1000.\n");
+        return 1;
+    }
+
+    int numbers[N]; // VLA (Variable Length Array, allowed in C99+)
+    int sum = 0;
+    float average;
+
+    // Input elements
+    printf("Enter %d numbers:\n", N);
+    for (int i = 0; i < N; i++) {
+        printf("Element %d: ", i + 1);
+        scanf("%d", &numbers[i]);
+        sum += numbers[i];
+    }
+
+    // Calculate average
+    average = (float)sum / N;
+
+    // Display results
+    printf("\nSum of the elements: %d\n", sum);
+    printf("Average of the elements: %.2f\n", average);
+
+    return 0;
+}
+OUTPUT:
+Enter the number of elements: 3
+Enter 3 numbers:
+Element 1: 10
+Element 2: 20
+Element 3: 30
+
+Sum of the elements: 60
+Average of the elements: 20.00
+
+Q.32)Write a C program that generates the Fibonacci sequence up to N terms using a recursive function.
+=> #include <stdio.h>
+
+// Recursive function to return the nth Fibonacci number
+int fibonacci(int n) {
+    if (n <= 1)
+        return n;
+    return fibonacci(n - 1) + fibonacci(n - 2);
+}
+
+int main() {
+    int n;
+
+    // Ask user for the number of terms
+    printf("Enter the number of terms: ");
+    scanf("%d", &n);
+
+    if (n <= 0) {
+        printf("Please enter a positive number.\n");
+        return 1;
+    }
+
+    printf("Fibonacci sequence up to %d terms:\n", n);
+
+    for (int i = 0; i < n; i++) {
+        printf("%d ", fibonacci(i));
+    }
+
+    printf("\n");
+    return 0;
+}
+OUTPUT: 
+Enter the number of terms: 7
+Fibonacci sequence up to 7 terms:
+0 1 1 2 3 5 8
+
+Q.33)Write a C program that calculates the factorial of a given number using a function.
+=> #include<stdio.h>
+int factorial_num(int n);
+int main()
+{
+    int a=0;
+    printf("Enter the number : ");
+    scanf("%d",&a);
+   printf("The value of factorial %d is %d ",a,factorial_num(a));
+    return 0;
+}
+int factorial_num( int n){
+    if(n==0 || n==1){
+        return 1;
+    }
+    else{
+        return n * factorial_num (n-1);
+    }
+    
+}
+OUTPUT: Enter the number: 5
+        The value of factorial 5 is 120
+
+Q.34)Write a C program that takes a number as input and checks whether it is a palindrome using a function.
+=> #include <stdio.h>
+
+// Function to check if a number is a palindrome
+int isPalindrome(int num) {
+    int original = num;
+    int reversed = 0, digit;
+
+    while (num > 0) {
+        digit = num % 10;
+        reversed = reversed * 10 + digit;
+        num /= 10;
+    }
+
+    return (original == reversed);
+}
+
+int main() {
+    int number;
+
+    // Input from user
+    printf("Enter a number: ");
+    scanf("%d", &number);
+
+    // Handle negative input
+    if (number < 0) {
+        printf("Negative numbers are not considered palindromes.\n");
+        return 1;
+    }
+
+    // Check and display result
+    if (isPalindrome(number)) {
+        printf("%d is a palindrome.\n", number);
+    } else {
+        printf("%d is not a palindrome.\n", number);
+    }
+
+    return 0;
+}
+OUTPUT:
+Enter a number: 1221
+1221 is a palindrome.
+
+Q.35)Write a C program that takes a string as input and reverses it using a function.
+=>  #include <stdio.h>
+#include <string.h> // Required for strlen()
+
+// Function to reverse a string
+void reverseString(char *str) {
+    int length = strlen(str);
+    int i, j;
+    char temp;
+
+    
+    for (i = 0, j = length - 1; i < j; i++, j--) {
+        temp = str[i];
+        str[i] = str[j];
+        str[j] = temp;
+    }
+}
+
+int main() {
+    char myString[100]; // Declare a character array to store the string
+
+    printf("Enter a string: ");
+    fgets(myString, sizeof(myString), stdin); 
+
+    myString[strcspn(myString, "\n")] = 0;
+
+    printf("Original string: %s\n", myString);
+
+    reverseString(myString); // Call the function to reverse the string
+
+    printf("Reversed string: %s\n", myString);
+
+    return 0;
+}
+OUTPUT:
+Enter a string: XYZ
+Original string: XYZ
+Reversed string: ZYX
+
+Q.36)Write a C program that takes a string from the user and counts the number of vowels and consonants in the string.
+=>   #include <stdio.h>
+#include <ctype.h>  // For tolower() and isalpha()
+
+// Function to count vowels and consonants
+void countVowelsAndConsonants(const char str[], int *vowels, int *consonants) {
+    *vowels = 0;
+    *consonants = 0;
+
+    for (int i = 0; str[i] != '\0'; i++) {
+        char ch = tolower(str[i]);
+
+        if (isalpha(ch)) {  // Check if it's a letter
+            if (ch == 'a' || ch == 'e' || ch == 'i' ||
+                ch == 'o' || ch == 'u') {
+                (*vowels)++;
+            } else {
+                (*consonants)++;
+            }
+        }
+    }
+}
+
+int main() {
+    char str[200];
+    int vowels, consonants;
+
+    // Input string from user
+    printf("Enter a string: ");
+    fgets(str, sizeof(str), stdin);
+
+    // Remove trailing newline character if any
+    str[strcspn(str, "\n")] = '\0';
+
+    // Count vowels and consonants
+    countVowelsAndConsonants(str, &vowels, &consonants);
+
+    // Output results
+    printf("Vowels: %d\n", vowels);
+    printf("Consonants: %d\n", consonants);
+
+    return 0;
+}
+OUTPUT:
+Enter a string: Hello, World!
+Vowels: 3
+Consonants: 7
+
+Q.37)Write a C program that counts the number of words in a sentence entered by the user.
+=>   #include <stdio.h>
+#include <string.h>
+#include <ctype.h>
+
+int countWords(const char *str) {
+    int count = 0;
+    int inWord = 0;  // Flag to track if we're inside a word
+
+    for (int i = 0; str[i] != '\0'; i++) {
+        if (isspace(str[i])) {
+            // If we were inside a word, it ended here
+            inWord = 0;
+        } else {
+            // If not inside a word, now we found a new word
+            if (inWord == 0) {
+                count++;
+                inWord = 1;
+            }
+        }
+    }
+
+    return count;
+}
+
+int main() {
+    char sentence[500];
+
+    printf("Enter a sentence: ");
+    fgets(sentence, sizeof(sentence), stdin);
+
+    // Remove trailing newline if present
+    sentence[strcspn(sentence, "\n")] = '\0';
+
+    int wordCount = countWords(sentence);
+
+    printf("Number of words: %d\n", wordCount);
+
+    return 0;
+}
+OUTPUT:
+Enter a sentence: Hello, how are you doing today?
+Number of words: 6
+
+Q.38) Write a C program that checks whether a given number is an Armstrong number or not (e.g., 153 = 1^3 + 5^3 + 3^3).
+Challenge: Write a program to find all Armstrong numbers between 1 and 1000.
+=> #include <stdio.h>
+#include <math.h>
+
+int countDigits(int num) {
+    int count = 0;
+    while (num != 0) {
+        count++;
+        num /= 10;
+    }
+    return count;
+}
+
+int isArmstrong(int num) {
+    int original = num;
+    int digits = countDigits(num);
+    int sum = 0;
+
+    while (num > 0) {
+        int digit = num % 10;
+        sum += (int)pow(digit, digits);
+        num /= 10;
+    }
+
+    return (sum == original);
+}
+
+int main() {
+    printf("Armstrong numbers between 1 and 1000 are:\n");
+
+    for (int i = 1; i <= 1000; i++) {
+        if (isArmstrong(i)) {
+            printf("%d\n", i);
+        }
+    }
+
+    return 0;
+}
+OUTPUT:
+Armstrong numbers between 1 and 1000 are:
+1
+2
+3
+4
+5
+6
+7
+8
+9
+153
+370
+371
+407
+
+Q.39)Write a C program that generates Pascal’s Triangle up to N rows using loops.
+=>   #include <stdio.h>
+
+// Function to calculate factorial
+unsigned long long factorial(int n) {
+    unsigned long long fact = 1;
+    for (int i = 2; i <= n; i++) {
+        fact *= i;
+    }
+    return fact;
+}
+
+// Function to calculate nCr (combination)
+unsigned long long nCr(int n, int r) {
+    return factorial(n) / (factorial(r) * factorial(n - r));
+}
+
+int main() {
+    int n;
+
+    printf("Enter the number of rows for Pascal's Triangle: ");
+    scanf("%d", &n);
+
+    for (int i = 0; i < n; i++) {
+        // Print leading spaces for formatting
+        for (int space = 0; space < n - i - 1; space++) {
+            printf("  ");
+        }
+
+        // Print values in the row
+        for (int j = 0; j <= i; j++) {
+            printf("%4llu ", nCr(i, j));
+        }
+        printf("\n");
+    }
+
+    return 0;
+}
+OUTPUT:
+Enter the number of rows for Pascal's Triangle: 5
+           1 
+         1    1 
+       1    2    1 
+     1    3    3    1 
+   1    4    6    4    1 
+
+Q.40)Write a C program that implements a simple number guessing game. The program should generate a random number between 1 and 100, and the user should guess the number within a limited number of attempts.
+Challenge: Provide hints to the user if the guessed number is too high or too low.
+=> #include <stdio.h>
+#include <stdlib.h>
+#include <time.h>
+
+int main() {
+    int secretNumber, guess, maxAttempts = 7;
+    int attempts = 0;
+
+    // Initialize random seed
+    srand(time(NULL));
+
+    // Generate random number between 1 and 100
+    secretNumber = rand() % 100 + 1;
+
+    printf("Welcome to the Number Guessing Game!\n");
+    printf("I have chosen a number between 1 and 100.\n");
+    printf("You have %d attempts to guess it.\n", maxAttempts);
+
+    while (attempts < maxAttempts) {
+        printf("Attempt %d: Enter your guess: ", attempts + 1);
+        scanf("%d", &guess);
+
+        if (guess < 1 || guess > 100) {
+            printf("Please guess a number between 1 and 100.\n");
+            continue;  // Don't count invalid guess as an attempt
+        }
+
+        attempts++;
+
+        if (guess == secretNumber) {
+            printf("Congratulations! You guessed the number in %d attempts.\n", attempts);
+            break;
+        } else if (guess < secretNumber) {
+            printf("Too low! Try a higher number.\n");
+        } else {
+            printf("Too high! Try a lower number.\n");
+        }
+    }
+
+    if (attempts == maxAttempts && guess != secretNumber) {
+        printf("Sorry! You've used all your attempts. The number was %d.\n", secretNumber);
+    }
+
+    return 0;
+}
+OUTPUT:
+Welcome to the Number Guessing Game!
+I have chosen a number between 1 and 100.
+You have 7 attempts to guess it.
+Attempt 1: Enter your guess: 33
+Too high! Try a lower number.
+
+__________________________________________________________________XXXXXXXX____________________________________________________________________________________
+
+     
+
+   
+      
+    
+    
+    
