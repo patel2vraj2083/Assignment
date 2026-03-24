@@ -1,0 +1,664 @@
+Web development:
+https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements
+
+LiveScript : Branden Eich :1991 : 1995 : javascript : Netscape
+
+version of Html: 5.2
+ECMA: Europian computer Manufacturer Association :1997
+
+ES6:2015
+ES Next: 2023
+
+cjs: common Javascript
+
+ESM: EcmaScript module
+
+UTF-8=> Unicode transformation format: encoding format
+Element: <p>This is contenet</p>
+
+Html:
+DOM Structure:
+root element : html
+head : <title><meta>
+body:
+
+tags:
+ul: unorderd list
+ol: orderd list
+dl: data list
+
+container:
+div: block container
+span: inline container
+section: block level container
+
+paragraph:
+p:paragraph
+b:bold
+pre:preformatted text
+strong: text bold,  machine readable
+i:italic
+em: text italic
+
+form: methods, action, enctype
+lable:
+input: radio, text, email, password, checkbox
+
+HTML5 TAGS:
+Basic Structure Tags
+These tags form the essential framework of any HTML document. 
+<!DOCTYPE>: Defines the document type and version of HTML.
+<html>: The root element of the entire HTML document.
+<head>: Contains metadata and links to external resources like CSS files.
+<title>: Specifies the title of the document, shown in the browser's title bar or tab.
+<body>: Contains all the visible content of the web page.
+<h1> to <h6>: Defines HTML headings of different levels.
+ 
+Text Formatting & Semantics
+These tags structure text and provide semantic meaning. 
+<p>: Defines a paragraph.
+<br>: Inserts a single line break.
+<a>: Defines a hyperlink to link to other pages or resources.
+<strong>: Defines text with strong importance (typically displayed as bold).
+<em>: Defines emphasized text (typically displayed as italics).
+<div>: A generic container for flow content, often used for layout with CSS.
+<span>: An inline container for phrasing content, used to apply styles to a part of a text. 
+
+Lists, Tables, and Forms
+These tags are used for organizing data and creating user input elements. 
+<ul>: Defines an unordered (bulleted) list.
+<ol>: Defines an ordered (numbered) list.
+<li>: Defines a list item within a list.
+<table>: Defines an HTML table.
+<tr>, <th>, <td>: Define table rows, headers, and data cells, respectively.
+<form>: Defines an HTML form for user input.
+<input>: Defines an input control (e.g., text fields, checkboxes, radio buttons).
+<button>: Defines a clickable button.
+ 
+Multimedia and Advanced Tags
+HTML also includes tags for embedding multimedia and more complex features. 
+<img>: Embeds an image in the document.
+<audio>: Defines embedded sound content.
+<video>: Defines embedded video content.
+<canvas>: Used to draw graphics dynamically via scripting.
+<section>, <article>, <nav>, <footer>, <header>: Semantic tags introduced in HTML5 to better structure document sections. 
+
+<html>: The root element of an HTML page.
+<head>: Contains meta-information about the document, such as the title and links to stylesheets.
+<body>: Contains all the visible content of the web page.
+<header>: Defines a container for introductory content or a set of navigation links.
+<nav>: Defines a section of navigation links.
+<main>: Specifies the main content of a document, excluding headers, footers, and sidebars.
+<article>: Represents self-contained content, such as a blog post or news story.
+<section>: Defines a section in a document (e.g., chapters, tabs, etc.).
+<aside>: Defines content aside from the main content (e.g., sidebars).
+<footer>: Defines a footer for a document or a section.
+
+1rem = 16px
+
+box-sizing: border-box, content box(default).
+margin:
+padding:
+border:
+
+media query: responsiveness
+
+1 inch = 96px
+1 cm = 37.8px
+1 em = 16px
+1 rem = 16px
+1 fr(fraction unit)= width ka 25%
+
+website :dashboard
+display :1D : flex
+display: 2D : Grid
+
+Grid Properties:
+grid-dap=> gap:
+
+grid-template-areas:
+grid-template-column:
+grid-template-row:
+
+Container:
+.container, which sets a max-width at each responsive breakpoint
+.container-fluid, which is width: 100% at all breakpoints
+.container-{breakpoint}, which is width: 100% until the specified breakpoint
+
+web pages idvided into : 12 parts
+
+Animation:
+keayframes:
+Translation
+Transition
+Transform
+Pseudo class
+
+@media : - Used for media queries to apply styles depending on device width, orientation, or other conditions.
+
+animation :- A shorthand property to define animations (name, duration, timing, etc.).
+
+variable : - CSS custom properties (variables) let you reuse values.
+
+keyframes : - Define the steps of an animation.
+
+translation : - Moves an element along the X/Y axis.
+
+transition : - Smoothly animates property changes.
+
+tranform : - Applies 2D/3D transformations like rotate, scale, skew, translate.
+
+pseudo class: - Special selectors for element states (hover, focus, nth-child, etc.).
+
+Frameworks:
+Angular JS
+Vue JS
+
+Libraries:
+React JS
+Jquery
+
+XML : Extended markup Language
+
+M : model : DataBase - SQL
+V : view : Frontend - React JS , Next JS
+C : controller : Backend - Java / Python / PHP / Perl / Ruby on Rails / C++
+
+Javascript + CSS = Bootstrap [ framework ]
+
+Javascript -> 
+Moocha -> Livescript -> Javascript
+1991 : Brandan Eich
+
+Document Object Model :
+Document :
+
+Browser Object Model:
+window.alert()
+window.prompt()
+
+web api :
+its a set of functions and protocols that allows different software applications to communicate with each other over the internet using standard HTTP protocols.
+
+types of web api :
+document :
+console : node js : ryan dahl : 2009 : Environment : where we can run javascript code 
+
+ECMA : europian computer manufacturer Association : 1997
+
+ES6 : 2015 -->
+let and const : introduces block scoping to replace var keyword
+Arrow function : () => {}
+Classes : Object Oriented Programming
+Promises : Built in support for asynchronous Programming
+Modules : native import and export
+template literals : Multiline string
+
+ES7 : 2016 -->
+Array.includes() : for easy searching
+exponential operator : **
+
+ES8 : 2017 -->
+Async Await 
+
+ES9 : 2018 -->
+Rest operator / spread operator
+
+ES10 : 2019 -->
+Array.flat()
+Object.fromEntries()
+
+ES11 : 2020 -->
+?. - optional chaining
+?? - Nullish coalescing
+
+ES12 : 2021 -->
+String.replaceALL()
+( &&= ) : Logical Assignment operator
+
+ES13 : 2022 -->
+Encapsulation 
+private feilds and negative indexing
+
+ES14 : 2023 -->
+Array copy :
+Deep copy & Shallow copy 
+toSorted()
+-------------------------------------------------------------------------------------------------------------------------------------------
+                                          Proggraming HTML & CSS:-
+HTML CODE FILE:
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard Development</title>
+    <link rel="stylesheet" href="practice.css">
+</head>
+
+<body>
+    <header class="navbar">
+        <div class="logo">Dashboard</div>
+        <nav class="nav-links">
+            <a href="#">Product</a>
+            <a href="#">Pricing</a>
+            <a href="#">Best Practice</a>
+            <a href="#">Dashboard Examples</a>
+            <a href="#">Company</a>
+        </nav>
+
+        <div class="auth-buttons">
+            <a href="#" class="btn-login">Log in</a>
+            <a href="#" class="btn-signup-nav">Sign up</a>
+        </div>
+    </header>
+
+
+    <main class="signup-container">
+        <section class="info-section">
+            <h1>Welcome to Dashboard</h1>
+            <p class="subtle">Sign up for a free trial, and start broadcasting real-time data today. It’s easier than
+                you think.</p>
+
+            <div class="cards-grid">
+                <div class="card  card-blue">
+                    <h2>15 mins</h2>
+                    <p>to build your first dashboard</p>
+                </div>
+                <div class="card card-dark">
+                    <h2>14 days</h2>
+                    <p>to try everything for free</p>
+                </div>
+
+            </div>
+
+
+            <div class="image-box">
+                <img src="https://www.geckoboard.com/_next/static/media/try-geckoboard.c6172781.webp" alt="user working">
+            </div>
+        </section>
+
+        <section class="form-section">
+            <div class="form-card">
+                <form action="">
+                    <div class="input-group">
+                        <label for="">Full Name</label>
+                        <input type="text" name="" id="" required>
+                    </div>
+
+                    <div class="input-group">
+                        <label for="">Work email</label>
+                        <input type="email" name="" id="" required>
+                    </div>
+
+                    <div class="input-group">
+                        <label for="">Password</label>
+                        <input type="password" name="" id="" required>
+                    </div>
+                    <div class="input-group">
+                        <label for="">Phone Number</label>
+                        <input type="text" name="" id="" required>
+                    </div>
+
+                    <button type="submit" class="btn-continue">Continue</button>
+                    <p class="terms">By continuing you agree to our privacy policy & terms of service. We respect your
+                        privacy. Your data is stored securely and handled in accordance with our DPA and the Data
+                        Protection Legislation.</p>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer class="main-footer">
+        <div class="footer">
+            <div class="logo1">Dashboard</div>
+            <hr> 
+            <div class="footer-links">
+                <div class="footer-sublink">
+                    
+                <div class="ulli">
+                    <ul class="links">
+                        <p>Product</p>
+                        <li><a href="https://www.geckoboard.com/product/data-sources/hubspot/">Hubspot</a></li>
+                        <li><a href="http://geckoboard.com/product/data-sources/zendesk-support/">Zendesk-Support</a></li>
+                        <li><a href="http://product/data-sources/salesforce/">salesforce</a></li>
+                        <li><a href="https://www.geckoboard.com/product/data-sources/aircall/">Aircall</a></li>
+                        <li><a href="https://www.geckoboard.com/product/data-sources/">Sources</a></li>
+                        <li><a href="https://www.geckoboard.com/product/dashboard-creator/">dashboard-creator</a></li>
+                        <li><a href="https://www.geckoboard.com/product/data-sources/hubspot/">Hubspot</a></li>
+                        <li><a href="https://www.geckoboard.com/product/data-sources/hubspot/">Hubspot</a></li>
+                        <li><a href="https://www.geckoboard.com/product/data-sources/hubspot/">Hubspot</a></li>
+                        <li><a href="https://www.geckoboard.com/product/data-sources/hubspot/">Hubspot</a></li>
+                        <li><a href="https://www.geckoboard.com/product/data-sources/hubspot/">Hubspot</a></li>
+                       
+                    </ul>
+                      
+                    <ul class="links">
+                        <p>Best practice</p> 
+                        <li><a href="https://www.geckoboard.com/product/data-sources/hubspot/">Hubspot</a></li>
+                        <li><a href="http://geckoboard.com/product/data-sources/zendesk-support/">Zendesk-Support</a></li>
+                        <li><a href="http://product/data-sources/salesforce/">salesforce</a></li>
+                        <li><a href="https://www.geckoboard.com/product/data-sources/aircall/">Aircall</a></li>
+                        <li><a href="https://www.geckoboard.com/product/data-sources/">Sources</a></li>
+                        <li><a href="https://www.geckoboard.com/product/dashboard-creator/">dashboard-creator</a></li>
+                        <li><a href="https://www.geckoboard.com/product/data-sources/hubspot/">Hubspot</a></li>
+                       
+                    </ul>
+                     
+                    <ul class="links">
+                        <p>Dashboard examples</p>
+                        <li><a href="https://www.geckoboard.com/product/data-sources/hubspot/">Hubspot</a></li>
+                        <li><a href="http://geckoboard.com/product/data-sources/zendesk-support/">Zendesk-Support</a></li>
+                        <li><a href="http://product/data-sources/salesforce/">salesforce</a></li>
+                        <li><a href="https://www.geckoboard.com/product/data-sources/aircall/">Aircall</a></li>
+                        <li><a href="https://www.geckoboard.com/product/data-sources/">Sources</a></li>
+                        <li><a href="https://www.geckoboard.com/product/dashboard-creator/">dashboard-creator</a></li>
+                        <li><a href="https://www.geckoboard.com/product/data-sources/hubspot/">Hubspot</a></li>
+                        <li><a href="https://www.geckoboard.com/product/data-sources/hubspot/">Hubspot</a></li>
+                        <li><a href="https://www.geckoboard.com/product/data-sources/hubspot/">Hubspot</a></li>
+                        <li><a href="https://www.geckoboard.com/product/data-sources/hubspot/">Hubspot</a></li>
+                       
+                    </ul>
+
+                     <ul class="links">
+                        <p>Company</p>
+                        <li><a href="https://www.geckoboard.com/product/data-sources/hubspot/">Hubspot</a></li>
+                        <li><a href="http://geckoboard.com/product/data-sources/zendesk-support/">Zendesk-Support</a></li>
+                        <li><a href="http://product/data-sources/salesforce/">salesforce</a></li>
+                        <li><a href="https://www.geckoboard.com/product/data-sources/aircall/">Aircall</a></li>
+                        <li><a href="https://www.geckoboard.com/product/data-sources/">Sources</a></li>
+                        <li><a href="https://www.geckoboard.com/product/dashboard-creator/">dashboard-creator</a></li>
+                        <li><a href="https://www.geckoboard.com/product/data-sources/hubspot/">Hubspot</a></li>
+                        <li><a href="https://www.geckoboard.com/product/data-sources/hubspot/">Hubspot</a></li>
+                        <li><a href="https://www.geckoboard.com/product/data-sources/hubspot/">Hubspot</a></li>
+                        <li><a href="https://www.geckoboard.com/product/data-sources/hubspot/">Hubspot</a></li>
+                       
+                    </ul>
+
+                    <ul class="links">
+                        <p>Help</p> 
+                        <li><a href="https://www.geckoboard.com/product/data-sources/hubspot/">Hubspot</a></li>
+                        <li><a href="http://geckoboard.com/product/data-sources/zendesk-support/">Zendesk-Support</a></li>
+                        <li><a href="http://product/data-sources/salesforce/">salesforce</a></li>
+                        <li><a href="https://www.geckoboard.com/product/data-sources/aircall/">Aircall</a></li>
+                        <li><a href="https://www.geckoboard.com/product/data-sources/">Sources</a></li>
+                        <li><a href="https://www.geckoboard.com/product/dashboard-creator/">dashboard-creator</a></li>
+                        <li><a href="https://www.geckoboard.com/product/data-sources/hubspot/">Hubspot</a></li>
+                       
+                    </ul>
+                    
+                </div>
+                <hr>
+                <section class="footer-end">
+                    <div class="copy">
+                        © Geckoboard 2026
+                    </div>
+                     <div class="follo">
+                       Follow us on
+                    </div>
+                </section>
+                <!-- <div class="footer-end">
+                    <p>© Geckoboard 2026</p>
+                    <p>Follow us on</p>
+                </div> -->
+                
+                
+            </div>
+        </div>
+    </div>
+    </footer>
+
+</body>
+
+</html>
+
+CSS CODE FILE:
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Raleway:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root{
+    --primary-green : #4ade80;
+    --dark-blue : #1d1d35;
+    --light-blue : #00d4ff;
+    --bg-gray : #e9ecf3;
+    --text-main : #1d1d35;
+}
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter' sans-serif;
+}
+
+body{
+    background-color: #ffffff;
+    color: var(--text-main);
+}
+
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 50px;
+    background: var(--dark-blue);
+    color: white;
+}
+
+.logo{
+    font-size: 24px;
+    font-weight: 800;
+    color: var(--primary-green);
+}
+
+.nav-links a{
+    color: #ffffff;
+    text-decoration: none;
+    margin: 0 15px;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.btn-signup-nav{
+    background: var(--primary-green);
+    color : var(--dark-blue) !important;
+    padding: 8px 20px;
+    border-radius: 20px;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.btn-login{
+    background: var(--dark-blue);
+    color : white !important;
+    padding: 8px 20px;
+    border-radius: 20px;
+    border-style: solid;
+    border-color: var(--primary-green);
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.signup-container{
+    display: flex;
+    max-width: 1200px;
+    margin: 50px auto;
+    gap:  40px;
+    padding: 0 20px;
+}
+
+
+/* flex can be 0, 1, 2 
+flex 1 means units will occupy same size
+flex 2 means there will be 2x width of 1 container than the other container in the same parent container*/
+
+.info-section{
+    flex: 1.2;
+    /* flex: 1; */
+}
+
+.form-section{
+    flex: 0.8;
+    /* flex: 1; */
+}
+
+h1{
+    font-size: 42px;
+    margin-bottom: 20px;
+}
+
+.subtle{
+    font-size: 18px;
+    margin-bottom: 40px;
+    color : #555;
+}
+
+.cards-grid{
+    display: flex;
+    gap: 20px;
+    margin-bottom: 20px;
+}
+
+.card{
+    padding: 30px;
+    border-radius: 20px;
+    color: white;
+    flex: 1;
+}
+
+.card-blue{
+    background:  var(--light-blue);
+}
+
+.card-dark{
+    background:  var(--dark-blue);
+}
+
+.card h2{
+    font-size: 36px;
+}
+
+.image-box{
+    width: 100%;
+    border-radius: 20px;
+    object-fit: cover;
+}
+
+.form-card{
+    background: var(--bg-gray);
+    padding: 40px;
+    border-radius: 15px;
+}
+
+.input-group{
+    margin-bottom: 20px;
+}
+
+.input-group label{
+    display: block;
+    font-size: 14px;
+    margin-bottom: 8px;
+    color: #555;
+    font-weight: 600;
+   
+}
+
+.input-group input{
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+
+}
+.btn-continue{
+    width: 100%;
+    background: var(--primary-green);
+    border: none;
+    padding: 15px;
+    border-radius: 30px;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+.btn-continue:hover{
+    opacity: 0.9;
+
+}
+.btn-login:hover{
+         background: var(--primary-green);
+    }
+
+.terms{
+    margin-top: 20px;
+    font-size: 12px;
+    color: #666;
+    line-height: 1.5;
+}
+.main-footer{
+    background: var(--dark-blue);
+    color: white;
+    
+}
+.ulli{
+    display: flex;
+    gap: 90px;
+    line-height: 30px;
+    margin-left: 50px;
+    
+}
+.links p{
+    font-size: 20px;
+}
+
+.links li {
+    list-style: none;
+}
+.links li a{
+    text-decoration: none;
+    color: #666;
+}
+.footer-links{
+    margin-top: 30px;
+}
+.logo1{
+    font-size: 24px;
+    font-weight: 800;
+    color: var(--primary-green);
+    padding: 30px 30px;
+}
+.footer-end {
+    padding: 30px 30px;
+     margin: 20px 0px;
+    display: flex;
+    
+}
+ .follo{
+   margin-left: auto;
+}
+
+
+
+@media(max-width : 900px){
+    .signup-container{
+        flex-direction: column;
+    }
+    .navbar  .nav-links{
+        display: none;
+    }
+    .cards-grid{
+        flex-direction: column;
+    }
+
+}
+
+
+
+
+
+
