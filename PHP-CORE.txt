@@ -1,0 +1,380 @@
+
+
+                                        PHP->PHP-CORE Assignment:
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------------
+What is PHP?
+
+PHP is a server-side scripting language, 
+which is used to manage dynamic web pages, 
+databases and build websites with features like session tracking and e-commerce.
+PHP is a general-purpose scripting language,
+It was created by Danish-Canadian programmer Rasmus Lerdorf in 1993 and released in 1995.
+PHP was originally an abbreviation of Personal Home Page,
+but it now stands for the recursive backronym PHP: Hypertext Preprocessor.
+PHP development began in 1993.
+when Rasmus Lerdorf wrote several Common Gateway Interface (CGI) programs in C,
+which he used to maintain his personal homepage. 
+He extended them to work with HTML forms and to communicate with databases, 
+and called this implementation "Personal Home Page/Forms Interpreter" or PHP/FI.
+NOW leatest version of PHP is: (8.5.4)12 March 2026;
+
+Interpreted language ka matlab hota hai aisi programming language jisme code ko line-by-line turant run kiya jata hai, 
+bina pehle usko poora machine code me convert kiye.
+
+Simple words me:
+
+Interpreter ek program hota hai jo aapka code read karta hai aur usi time execute karta hai.
+Har line ko alag-alag samajh ke run karta hai, isliye isme compilation step alag se nahi hota.
+
+PHP: Hypertext Preprocessor
+Version: 8.5.4
+
+Uses of PHP:
+
+PHP can perform several system functions like opening files, CRUD operations on data stores, 
+general-purpose scripting, etc. Besides system operations, there are also other uses like
+Handling Forms: PHP can handle form operations. 
+It can gather data, save data to a file and send data through emails.
+
+Database Operations: PHP can also create, read, update and delete elements in your database.
+
+Encryption: It can perform advanced encryption and encrypt data for you.
+
+Dynamic Page Content: It can generate dynamic page content
+
+PHP program Run link: php -S localhost:8000/filename
+
+What is XAMPP:
+
+XAMPP is a free, open-source software package that provides a local web server environment on your computer, 
+which is essential for developing and testing PHP applications offline. 
+It stands for X (Cross-Platform), Apache, MariaDB, PHP, and Perl.
+
+what is Apache?
+
+Apache (full name: Apache HTTP Server) ek web server software hai.
+Simple language me:
+Jab tum browser (Chrome, etc.) me koi website open karte ho, to request internet ke through ek server tak jaati hai.
+Apache ka kaam hai:
+user ki request receive karna
+website ka data (HTML, images, etc.) bhejna
+Matlab: Apache website ko internet par serve (dikhane) ka kaam karta hai.
+
+
+composer: Dependency Manager for PHP project
+Composer is a tool for dependecy management in php.
+It allows you to declare the libraries your project depends on and it will manage(install/update) them for you.
+
+PHP: Core php
+
+Object Oriented programming:
+
+SQL Programming:
+
+Laravel:
+
+M: Model : SQL Database
+V: View : Ajax, Jquery, React.js
+C: Controller: Backend : oops php
+
+Query Builder:
+Laravel's database query builder provides a convenient, fluent interface for creating and ruuning database queries.
+
+Eloquent Model: Eloquent is the Object-Relational Mapper(ORM) included with the Laravel framework.
+It provides an expressive, ActiveRecord implementation for working with your database.
+
+ORM: Object-Relational Mapper
+PHP: Variables
+Normal variable : $variable_name;
+ex. $name = "Vraj";
+    $age = 20;
+
+gettype: to get the type of data
+
+1.var_dump(): Datatype + value + length sub show karta he.
+Deep debygging ke liye best he.
+
+2.print_r(): Simple redable format deta he.
+sirf value show karta he.
+
+3.var_export(): code jesa output deta he.
+Aisa output deta hai jo dobara PHP code mein use ho sakta hai.
+mostly debugging + storing structure 
+
+Predefined functions:
+echo(): to display the data
+print(): to display the data
+
+The main differences between echo and print:
+in PHP are that echo can output multiple values and is slightly faster, 
+while print can only output a single value and returns a value of 1,
+
+Variables:
+Variables are containers that can store information which can be manipulated or 
+referenced later by the programmer within the code.
+
+Data Types:data types are classifications used to define the kind of value a variable can store.
+string, integer, Array, Decimal:float, object 
+Array:collection of data.
+indexing: starting from 0,1,2,3.......
+1 Dimensional, 2 Dimensional, Multidimensional: It creates Array ke under Array
+Associate Array: key value pair
+Array and string Methods:
+for print:=> print_r, var_dump, var_export
+
+Array Methods:
+array_unshift(): this will add the element at first index of array.
+array_pop(): this will remove the element from last index of array.
+array_splice(): this will removes elements from an array and, optionally replaces them with new elements.
+array_splice():syntext
+array_slice(array $array, int $offset, ?int $length = null, bool $preserve_keys = false): array
+
+sort() - sorts an indexed array in ascending order
+rsort() - sorts an indexed array in descending order
+asort() - sorts an associative array in ascending order, according to the value
+ksort() - sorts an associative array in ascending order, according to the key
+arsort() - sorts an associative array in descending order, according to the value
+krsort() - sorts an associative array in descending order, according to the key
+
+Array Methods:
+
+Function:
+1.function setData()
+{
+
+}
+
+2.default function: non parameterized function.
+
+anonymous function.
+
+arrow function.
+
+3.parameterized function.
+
+function getData($para1, $para2, $para3)
+{
+
+}
+getData($age1,$age2,$age3);
+
+4.default parameterized function:
+
+function myData($name="chirag",$age=21,$salary=50000)
+{
+
+}
+getData("vraj patel",22,40000);
+
+function myData($name="chirag",$age=21,$salary=50000)
+{
+
+}
+getData();
+
+5.Anonymous funtion:
+
+$result = function($x,$y,$z)
+{
+
+};
+function calling:
+$result(21,15,16);
+
+6.Default anonymous function" 
+$result = function($x=0,$y=0,$z=0){
+
+};
+function calling:
+$result();
+
+Arrow function:
+$calculate = fn($x,$y) => $x + $y;
+function calling:
+$calculate(25,25);
+
+Implode and Explode method:
+Implode(): it is used for convert array to string.
+Explode(): it is used for convert string to array.
+
+foreach: PHP me foreach loop ek special loop hota hai jo arrays (ya collections) 
+ke elements ko ek-ek karke access karne ke liye use hota hai. 
+Ye for loop se simple aur readable hota hai.
+foreach kab use hota hai?
+Jab hume array ke sab elements access karne ho.
+foreach sirf arrays aur objects ke liye use hota hai
+Ye automatically array ke har element par loop chala deta hai.
+
+array_filter() PHP ka ek built-in function hai jo array ke data ko condition ke hisaab se filter (chaan kar) naya array banata hai.
+
+array_map() kya hota hai?
+array_map() ka use array ke har element par function apply karne ke liye hota hai
+Ye data ko change (transform) karta hai
+
+String Methods:
+ucfirst(): isme dono string mese first string ka pehla latter capitel print hoga
+strtolower(): sabhi string lower me ayegi
+strupper(): upper case me ayegi sabhi string
+
+Database connectivity:
+mysqli method:
+pdo method: php Data object:
+Registration form:
+Login Form:
+
+Session:A session is a server-side storage mechanisum that keeps track of user data during a single visit to a website.
+Session ka use user ki information temporarily server par store karne ke liye hota hai.
+Data server pe store hota hai
+Har user ke liye alag session hota hai
+Mostly login system me use hota hai
+syntext:
+session_start();
+$_SESSION['name'] = "Vraj";
+echo $_SESSION['name']; // Vraj
+session_start() likhna mandatory hai
+Browser close hone par session generally khatam ho jata ha.
+
+Cookie: A cookies is a small text file(maximum 4KB)that the web server stores on the cilent's computer.
+Cookies me data user ke browser me store hota hai
+Client side storage
+Expiry time set kar sakte ho
+Login remember, preferences me use hota hai
+Cookies browser me save hoti hai
+User manually delete bhi kar sakta ha
+
+isset(): Check karta hai ki variable set hai ya nahi (exist karta hai ya nahi)
+$name = "Vraj";
+
+if(isset($name)){
+    echo "Variable exist karta hai";
+}
+Agar variable exist nahi kare:
+if(isset($age)){
+    echo "Hai";
+}else{
+    echo "Nahi hai";
+}
+
+unset(): Variable ko delete/remove karne ke liye use hota hai.
+$name = "Vraj";
+unset($name);
+echo $name; // Error (variable delete ho gaya)
+
+Session → Server me data store
+Cookies → Browser me data store
+isset() → Check karta hai variable hai ya nahi
+unset() → Variable delete karta hai
+
+1.include kya hota hai?
+include: include ka use dusri PHP file ko current file me add (import) karne ke liye hota hai.
+Warning aayegi 
+Lekin script chalti rahegi.
+
+2.require kya hota hai?
+require bhi file include karta hai (same kaam)
+Agar file na mile:
+Fatal error ❌
+Script turant bandh ho jati hai
+
+Feature	          include	       require
+File              Warning 	     Fatal Error ❌
+Script execution  Continue	       Stop
+
+3. include_once kya hota hai?
+Ye bhi include jaisa hi hai
+Par file sirf ek baar hi include hoti hai
+Agar same file 2 baar include karo
+To sirf ek hi baar load hogi.
+
+4. require_once kya hota hai?
+Ye require + once ka combo hai
+Agar file missing:
+Fatal error ❌
+Agar already include ho chuki:
+Dubara include nahi hogi ✔️
+File must hai:
+Agar file nahi mili → ❌ Fatal error (program band)
+once:
+File sirf ek hi baar include hogi.
+
+=> Global Variables:-
+Superglobals = PHP ke ready-made variables jo user, server, aur data ko handle karte hain
+1. $GLOBALS
+Ye sab global variables ka dabba (box) hai
+Kya karta hai?
+Global variables ko function ke andar use karne deta hai.
+
+2. $_SERVER
+ Ye server ki details deta hai
+ Kya karta hai?
+Kaunsi file chal rahi hai
+User ne GET request bheji ya POST
+Server ka naam kya hai
+Simple: “Website ka environment info”
+
+3. $_REQUEST
+ Ye GET + POST + COOKIE sabka mix hai
+ Kya karta hai?
+Kisi bhi method se aaya data ek jagah mil jata hai
+Lekin: Use kam karte hain (confusion + security issue)
+
+4. $_GET
+URL se data leta hai
+Example:
+ex.page.php?name=vraj
+Kya karta hai?
+URL me jo data hai wo read karta hai
+Simple: “Address bar ka data”
+
+5. $_POST
+Form se data leta hai (hidden / secure)
+Kya karta hai?
+Login form
+Signup form
+Simple: “Form ka data”
+
+6. $_FILES
+File upload handle karta hai
+Kya karta hai?
+Image upload
+PDF upload
+Simple: “User ne jo file di hai”
+
+7. $_COOKIE
+Browser me data store karta hai
+Kya karta hai?
+User preferences ya login info save karta hai
+Simple: “Browser ki memory”
+
+8. $_SESSION
+Server pe data store karta hai (secure)
+Kya karta hai?
+Login user ko yaad rakhta hai
+Simple: “Server ki memory”
+
+9. $_ENV
+System environment variables deta hai
+Kya karta hai?
+Server ke hidden config values deta hai
+Simple: “System settings”
+
+=>Real Life Flow:-
+1.User form fill kare → $_POST
+2.URL me data bheje → $_GET
+3.Login kare → $_SESSION
+4.Browser me data save → $_COOKIE
+5.File upload kare → $_FILES
+6.Server info → $_SERVER
+
+$_GET / $_POST: Used to collect data from HTML forms and URL PARAMETERS.
+
+$_SESSION: Stores data across multiple pages for a specific user.
+
+$_SERVER: Contains information about headers, path and script locations.
+
+$_FILES: Handles file uploads to the script.
+
+$_COOKIE: Accesses data sent by the browser via http cookies.
+
+
